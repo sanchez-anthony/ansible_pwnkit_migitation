@@ -1,0 +1,12 @@
+---
+## RedHat variables
+
+# Polkit package name
+polkit_package: "polkit"
+
+# pkexec binary path
+pkexec_path: /usr/bin/pkexec
+
+# pkexec permission mode
+pkexec_mode: '0755'
+...

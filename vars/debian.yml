@@ -1,0 +1,12 @@
+---
+## Debian variables
+
+# Polkit package name
+polkit_package: "policykit-1"
+
+# pkexec binary path
+pkexec_path: /usr/bin/pkexec
+
+# pkexec permission mode
+pkexec_mode: '0755'
+...
