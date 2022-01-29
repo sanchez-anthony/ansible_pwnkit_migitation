@@ -88,18 +88,24 @@ List of playbook variables availables:
 ## Usage
 
 1. Create playbook directory:
-`mkdir ansible_pwnkit_migitation`
+```shell
+$ mkdir ansible_pwnkit_migitation
+```
 
 2. Clone it into `ansible_pwnkit_migitation` directory:
-`git clone https://github.com/sanchez-anthony/ansible_pwnkit_migitation.git ansible_pwnkit_migitation`
+```shell
+$ git clone https://github.com/sanchez-anthony/ansible_pwnkit_migitation.git ansible_pwnkit_migitation
+```
 
 3. Running playbook with **your own host inventory**:
-`ansible-playbook -i inventory/hosts ansible_pwnkit_migitation/tasks/pwnkit_migitation.yml`
+```shell
+$ ansible-playbook -i inventory/hosts ansible_pwnkit_migitation/tasks/pwnkit_migitation.yml
+```
 
 # Example
 
 Running playbook on localhost:
-```
+```shell
 root@localhost:~$ stat /usr/bin/pkexec
   File: /usr/bin/pkexec
   Size: 29048           Blocks: 64         IO Block: 4096   regular file
