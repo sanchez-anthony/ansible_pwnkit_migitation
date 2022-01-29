@@ -118,7 +118,7 @@ Change: 2021-11-27 20:17:13.770135050 +0100
 
 root@localhost:~$ ansible-playbook ~/ansible_pwnkit_migitation/pwnkit_migitation.yml
 
-PLAY [PwnKit mitigation - Check if Polkit is installed and remove SUID-bit permission on pkexec] *******************************************************
+PLAY [PwnKit mitigation] *******************************************************
 
 TASK [Gathering Facts] **************************************************************************************************************************************
 ok: [localhost]
@@ -131,7 +131,7 @@ ok: [localhost]
 
 TASK [Show message when polkit is installed] ****************************************************************************************************************
 ok: [localhost] => {
-    "msg": "Package polkit in version 0.115 is installed."
+    "msg": "Package 'polkit' in version 0.115 is installed.\n"
 }
 
 TASK [Show message when polkit isn't installed] *************************************************************************************************************
