@@ -1,8 +1,11 @@
 ---
 # PwnKit mitigation
 #
-# CVE-2021-4034: https://blog.qualys.com/vulnerabilities-threat-research/2022/01/25/pwnkit-local-privilege-escalation-vulnerability-discovered-in-polkits-pkexec-cve-2021-4034
 # This playbook will check if Polkit is installed on host and disable SUID-bit permission for pkexec binary on a Linux host.
+#
+# More information:
+# - CVE-2021-4034:
+#   https://blog.qualys.com/vulnerabilities-threat-research/2022/01/25/pwnkit-local-privilege-escalation-vulnerability-discovered-in-polkits-pkexec-cve-2021-4034
 #
 # Anthony SANCHEZ <sanchez.antho@free.fr> - 29-01-2022
 # MIT license
@@ -23,7 +26,9 @@
 
         - name: Show message when polkit is installed
           ansible.builtin.debug:
-            msg: "Package '{{ ansible_facts.packages[polkit_package][0].name }}' in version {{ ansible_facts.packages[polkit_package][0].version }} is installed."
+            msg: >
+              Package '{{ ansible_facts.packages[polkit_package][0].name }}' in
+              version {{ ansible_facts.packages[polkit_package][0].version }} is installed.
           when:
             - "'polkit' in ansible_facts.packages"
 
@@ -47,8 +52,8 @@
           when:
             - polkit_pkexec.stat.exists
       rescue:
-          - name: Error(s) caught
-            debug:
-              msg: "An error was occurred during apply PwnKit mitigation fix: {{ ansible_failed_task.name }}"
+        - name: Error(s) caught
+          debug:
+            msg: "An error was occurred during apply PwnKit mitigation fix: {{ ansible_failed_task.name }}"
       tags: apply-mitigation
 ...
