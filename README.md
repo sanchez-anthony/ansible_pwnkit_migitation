@@ -99,7 +99,7 @@ $ git clone https://github.com/sanchez-anthony/ansible_pwnkit_migitation.git ans
 
 3. Running playbook with **your own host inventory**:
 ```shell
-$ ansible-playbook -i inventory/hosts ansible_pwnkit_migitation/tasks/pwnkit_migitation.yml
+$ ansible-playbook -i inventory/hosts ansible_pwnkit_migitation/pwnkit_migitation.yml
 ```
 
 # Example
