@@ -1,4 +1,4 @@
-# ansible_pwnkit_migitation
+# ansible_pwnkit_mitigation
 
 ![Linux](https://img.shields.io/badge/os-Linux-yellow)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE.md)
